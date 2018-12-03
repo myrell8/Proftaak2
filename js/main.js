@@ -68,10 +68,7 @@ function getFlightInformation() {
 
 		mustache(data.flights, "#generate-flights", ".container-cards");
 
-			JsBarcode("#barcode", flightId, {
-			width: 4,
-			height: 40,
-		});
+		
 
     }
 })
@@ -94,8 +91,18 @@ function mustache(data, template, outerTemplate) {
 }
 
 $(document).ready(function(){
-
-
+	$(document).on("click","#closeModal", function(){
+		$("#myModal").modal("hide");
+	});
+$(document).on("click",".btnGetValue",function(){
+	var flightId =  $(this).val();
+	console.log(flightId);
+	JsBarcode("#barcode", flightId, {
+		width: 4,
+		height: 40,
+	});
+	$(".modal-title").html(flightId);
+});
 
 	getFlightInformation();
 
@@ -126,6 +133,6 @@ $(document).ready(function(){
 
 });
 
-		
+
 
 });

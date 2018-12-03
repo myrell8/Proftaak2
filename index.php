@@ -32,47 +32,46 @@
     <div class="card-columns container-cards">
       <!-- Template will be displayed in here.. -->
     </div>
-
+<div id="modalDiv">
+<!-- Template of modal -->
+</div>
     <template id="generate-flights">
       {{#.}}
-      
 <div class="container">
 	<div class="card" style="width: 18rem;">
 	  <img class="card-img-top" src="img/flight1.gif" alt="Card image cap">
 	  <div class="card-body">
-	    <h5 class="card-title">Flight to: {{id}}</h5>
+	    <h5 class="card-title">Flight to: <span id="flightId">{{id}}</span></h5>
 	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 	    <!-- Button trigger modal -->
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" value="{{}}">
+		<button type="button" class="btn btn-primary btnGetValue" data-toggle="modal" data-target=".modal" value="{{id}}">
 		  Generate barcode
-		</button>
-
-		<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		  <div class="modal-dialog" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>
-		      <div class="modal-body">
-		        <svg id="barcode"></svg>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
-		      </div>
-		    </div>
-		  </div>
+		</button>	
 		</div>
-	  </div>
 	</div>
 </div>
-
 {{/.}}
 </template>
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+			<svg id="barcode"></svg>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 
 <!-- jQuery -->
@@ -86,7 +85,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
 
 <!-- Moment js  -->
-<script src="js/moment.min.js"></script>
+<!-- <script src="js/moment.min.js"></script> -->
 
 <!-- JsBarcode js -->
 <script src="js/JsBarcode.all.min.js"></script>
