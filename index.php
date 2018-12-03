@@ -20,7 +20,7 @@
 <div class="input-group">
 		  <input type="text" class="form-control" aria-label="Text input with dropdown button">
 		  <div class="input-group-append">
-		    <button class="btn btn-outline-success" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search options</button>
+		    <button class="btn btn-success" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search options <span class="caret"></span></button>
 		    <div class="dropdown-menu">
 		      <a class="dropdown-item" href="#">Filter op stad</a>
 		      <a class="dropdown-item" href="#">Filter op land</a>
@@ -37,10 +37,11 @@
 
 <div class="container">
  	<div class="col-xs-12 mx-auto">
-	 <div class="col-sm-4 mx-auto m-5">
+	 <div class="col-sm-12 mx-auto m-5">
 	 <div class="d-flex flex-column justify-content-center mt-5">
-	 	<input id="userInput" class="form-control" type="text"  autofocus/>
-		<input id="scannerInput" class="form-control" type="text" value="barcodescan" autofocus/>
+	 <div class="jumbotron jumbotron-fluid" id="scanner">
+	 	<input id="userInput" class="form-control col-sm-5 mx-auto" type="text"  autofocus/>
+		<input id="scannerInput" class="form-control col-sm-5 mx-auto" type="text" value="barcodescan" autofocus/></div>
 	 </div>
 	</div>
     <div class="card-columns container-cards">
@@ -67,7 +68,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
+        <h5 class="modal-title"></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -76,7 +77,6 @@
 			<svg id="barcode"></svg>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
