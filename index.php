@@ -28,16 +28,15 @@
 	    <input id="scannerInput" type="text" value="barcodescan" autofocus/>
 	</div>
 
-
+<div class="container">
+ 	<div class="col-xs-12">
     <div class="card-columns container-cards">
       <!-- Template will be displayed in here.. -->
     </div>
-<div id="modalDiv">
-<!-- Template of modal -->
+	</div>
 </div>
     <template id="generate-flights">
       {{#.}}
-<div class="container">
 	<div class="card" style="width: 18rem;">
 	  <img class="card-img-top" src="img/flight1.gif" alt="Card image cap">
 	  <div class="card-body">
@@ -49,7 +48,6 @@
 		</button>	
 		</div>
 	</div>
-</div>
 {{/.}}
 </template>
 <div class="modal" tabindex="-1" role="dialog">
