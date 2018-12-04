@@ -91,6 +91,7 @@ function mustache(data, template, outerTemplate) {
 }
 
 $(document).ready(function(){
+	getNewsArticles();
 	$('#scanner').tooltip("show");
 	$(document).on("click","#closeModal", function(){
 		$("#myModal").modal("hide");
