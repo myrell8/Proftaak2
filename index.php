@@ -6,12 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+<div class="wrapper">
 <?php include('includes/header.inc.php'); ?>
-
-
-	
-
-<div class="container">
+<div class="container divHeight">
  	<div class="col-xs-12 mx-auto">
 	 <div class="col-sm-12 mx-auto m-5">
 	 <div class="d-flex flex-column justify-content-center mt-5">
@@ -37,9 +34,11 @@
 		  Generate barcode
 		</button>	
 		</div>
+		
 	</div>
 {{/.}}
 </template>
+
 <div class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -58,7 +57,11 @@
     </div>
   </div>
 </div>
+<div class="push"></div>
+</div>
+
 <?php include('includes/footer.inc.php'); ?>
+
 </body>
 
 <!-- jQuery -->
