@@ -14,10 +14,13 @@
       </div>
         <template id="nieuwsArtikel">
           {{#.}}
-          <div class="col-xs-12">
-            <img src="{{urlToImage}}" alt="" class="img-fluid" style="max-height: 150px;">
-           <h1 class="display-4">{{title}}</h1> 
-           <p class="lead">{{content}}</p>
+          <div class="card mt-5">
+          <h5 class="card-header">{{title}}</h5>
+            <img src="{{urlToImage}}" alt="" class="card-img-top" style="height: 18rem; object-fit:cover">
+            <div class="card-body">
+           <p class="lead">{{content}} <a href="">lees meer...</a></p>
+           </div>
+           <div class="card-footer text-muted">Door: {{author}}</div>
           </div>
           {{/.}}
         </template>
