@@ -6,7 +6,7 @@
 <ul class="navbar-nav mr-auto">
 <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
 <li class="nav-item"><a href="results.php" class="nav-link">Flights</a></li>
-<li class="nav-item"><a href="nieuws.php" class="nav-link">News</a></li>
+<li class="nav-item"><a href="news.php" class="nav-link">News</a></li>
 </ul>
 <div class="pull-right">
 <div class="input-group mb-3">
