@@ -7,6 +7,7 @@
 	<link href="css/anysearch.css" rel="stylesheet">
 </head>
 <body>
+<?php require 'includes/header.inc.php'; ?>
 	<?php
 	        $url = $_GET['flight'];
 	        echo "<input class='flightName' type='hidden' value='".$url."'>";
@@ -89,6 +90,7 @@
 		</div>
 		{{/.}}
 	</template>
+	<?php require 'includes/footer.inc.php'; ?>
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js">
 </script> <!-- Bootstrap -->
