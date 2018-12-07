@@ -9,6 +9,7 @@
 <body>
 
 <?php require 'includes/header.inc.php'; ?>
+About
 <?php require 'includes/footer.inc.php'; ?>
 
 

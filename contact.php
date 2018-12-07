@@ -7,10 +7,9 @@
 	<link href="css/anysearch.css" rel="stylesheet">
 </head>
 <body>
+
 <?php require 'includes/header.inc.php'; ?>
-
-
-
+Contact
 <?php require 'includes/footer.inc.php'; ?>
 
 
