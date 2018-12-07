@@ -34,6 +34,7 @@
 		  Generate barcode
 		</button>	
 		</div>
+		
 	</div>
 {{/.}}
 </template>

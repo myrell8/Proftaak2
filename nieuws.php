@@ -12,9 +12,13 @@
       <div class="templateContainer">
         
       </div>
-        <template id="nieuwsArtikel">
+        
+    </div>
+  </div>
+  <?php include('includes/footer.inc.php'); ?>
+  <template id="nieuwsArtikel">
           {{#.}}
-          <div class="card mt-5">
+          <div class="card mt-5 mb-5">
           <h5 class="card-header">{{title}}</h5>
             <img src="{{urlToImage}}" alt="" class="card-img-top" style="height: 18rem; object-fit:cover">
             <div class="card-body">
@@ -24,9 +28,6 @@
           </div>
           {{/.}}
         </template>
-    </div>
-  </div>
-  <?php include('includes/footer.inc.php'); ?>
 </body>
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
