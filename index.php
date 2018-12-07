@@ -19,7 +19,6 @@
 </ul>
 <div class="pull-right">
 <div class="input-group">
-		  
 		  <div class="input-group-append">
 		    <button class="btn btn-success" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search options <span class="caret"></span></button>
 		    <div class="dropdown-menu">
@@ -30,60 +29,7 @@
 		  </div>
 			</div>
 		</div>
-
-</nav>
-
-
-	
-
-<div class="container">
- 	<div class="col-xs-12 mx-auto">
-	 <div class="col-sm-12 mx-auto m-5">
-	 <div class="d-flex flex-column justify-content-center mt-5">
-	 <div class="jumbotron jumbotron-fluid" id="scanner">
-		
-	 </div>
-	</div>
-    <div class="card-columns container-cards">
-      <!-- Template will be displayed in here.. -->
-    </div>
-	</div>
-</div>
-    <template id="generate-flights">
-    {{#.}}
-	<div class="card" style="width: 18rem;">
-	  <img class="card-img-top" src="img/flight1.gif" alt="Card image cap">
-	  <div class="card-body">
-	    <h5 class="card-title">Flight to: <span id="flightId">{{flightName}}</span></h5>
-	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	    <!-- Button trigger modal -->
-		<button type="button" class="btn btn-primary btnGetValue" data-toggle="modal" data-target=".modal" value="{{flightName}}">
-		  Generate barcode
-		</button>	
-		</div>
-	</div>
-
-
-	<div class="modal" tabindex="-1" role="dialog">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title">{{id}}</h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>
-	      </div>
-	      <div class="modal-body">
-				<svg id="barcode"></svg>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-	{{/.}}
-</template>
+	</nav>
 
 
 
