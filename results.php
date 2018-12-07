@@ -62,7 +62,7 @@
 
 
 
-
+</div>
 <?php require 'includes/footer.inc.php'; ?>
 </body>
 

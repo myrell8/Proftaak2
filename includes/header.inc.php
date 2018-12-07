@@ -4,14 +4,21 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 <ul class="navbar-nav mr-auto">
-<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-<li class="nav-item"><a href="#" class="nav-link">Flights</a></li>
+<li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+<li class="nav-item"><a href="results.php" class="nav-link">Flights</a></li>
 <li class="nav-item"><a href="nieuws.php" class="nav-link">News</a></li>
 </ul>
 <div class="pull-right">
-<div class="input-group">
-		  <input type="text" class="form-control" aria-label="Text input with dropdown button">
-		  <div class="input-group-append">
+<div class="input-group mb-3">
+  
+  <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+	<div class="input-group-prepend">
+    <button class="btn btn-md btn-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon1">Search</button>
+  </div>
+</div>
+<!-- <div class="input-group mb-3">
+<div class="input-group-prepend">
+		  <input type="text" class="form-control" aria-label="Text input with dropdown button"> 
 		    <button class="btn btn-success" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search options <span class="caret"></span></button>
 		    <div class="dropdown-menu">
 		      <a class="dropdown-item" href="#">Filter op stad</a>
@@ -19,7 +26,7 @@
 		      <a class="dropdown-item" href="#">Filter op IATA code</a>
 		    </div>
 		  </div>
-			</div>
+			</div> -->
 		</div>
 
 </nav>
