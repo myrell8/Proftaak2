@@ -52,5 +52,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
 
 <!-- nieuws.js -->
-<script src="js/nieuws.js"></script>
+<script src="js/news.js"></script>
 </html>
