@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>FlightCheck</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="css/anysearch.css" rel="stylesheet">
+	<?php require 'includes/head.php'; ?>
 </head>
 <body>
 <?php require 'includes/header.inc.php'; ?>
@@ -21,9 +18,6 @@ Index
 
 <!-- Mustache JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
-
-<!-- Moment js  -->
-<!-- <script src="js/moment.min.js"></script> -->
 
 <!-- JsBarcode js -->
 <script src="js/JsBarcode.all.min.js"></script>

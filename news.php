@@ -1,13 +1,11 @@
 <html>  
 <head>
-  <title>FlightCheck News</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <?php require 'includes/head.php'; ?>
 </head>
 
 <body>
   <div class="wrapper">
-    <?php include('includes/header.inc.php'); ?>
+    <?php require 'includes/header.inc.php'; ?>
     <div class="container divHeight">
       <div class="templateContainer">
         
@@ -15,7 +13,7 @@
         
     </div>
   </div>
-  <?php include('includes/footer.inc.php'); ?>
+  <?php require 'includes/footer.inc.php'; ?>
   <template id="nieuwsArtikel">
           {{#.}}
           <div class="card mt-5 mb-5">
@@ -38,9 +36,6 @@
 
 <!-- Mustache JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
-
-<!-- Moment js  -->
-<!-- <script src="js/moment.min.js"></script> -->
 
 <!-- JsBarcode js -->
 <script src="js/JsBarcode.all.min.js"></script>
