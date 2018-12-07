@@ -8,9 +8,7 @@
 </head>
 <body>
 <?php require 'includes/header.inc.php'; ?>
-
-
-
+Index
 <?php require 'includes/footer.inc.php'; ?>
 </body>
 
