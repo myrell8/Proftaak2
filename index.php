@@ -4,17 +4,44 @@
 	<title>Barcode Scanner</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="css/anysearch.css" rel="stylesheet">
 </head>
 <body>
-<div class="wrapper">
-<?php include('includes/header.inc.php'); ?>
-<div class="container divHeight">
+<nav class="navbar navbar-light bg-light navbar-expand">
+<a href="#" class="navbar-brand">NavBar</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<ul class="navbar-nav mr-auto">
+<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Flights</a></li>
+<li class="nav-item"><a href="#" class="nav-link">News</a></li>
+</ul>
+<div class="pull-right">
+<div class="input-group">
+		  
+		  <div class="input-group-append">
+		    <button class="btn btn-success" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search options <span class="caret"></span></button>
+		    <div class="dropdown-menu">
+		      <a class="dropdown-item" href="#">Filter op stad</a>
+		      <a class="dropdown-item" href="#">Filter op land</a>
+		      <a class="dropdown-item" href="#">Filter op IATA code</a>
+		    </div>
+		  </div>
+			</div>
+		</div>
+
+</nav>
+
+
+	
+
+<div class="container">
  	<div class="col-xs-12 mx-auto">
 	 <div class="col-sm-12 mx-auto m-5">
 	 <div class="d-flex flex-column justify-content-center mt-5">
 	 <div class="jumbotron jumbotron-fluid" id="scanner">
-	 	<input id="userInput" class="form-control col-sm-5 mx-auto" type="text"  autofocus/>
-		<input id="scannerInput" class="form-control col-sm-5 mx-auto" type="text" value="barcodescan" autofocus/></div>
+		
 	 </div>
 	</div>
     <div class="card-columns container-cards">
@@ -23,44 +50,43 @@
 	</div>
 </div>
     <template id="generate-flights">
-      {{#.}}
+    {{#.}}
 	<div class="card" style="width: 18rem;">
 	  <img class="card-img-top" src="img/flight1.gif" alt="Card image cap">
 	  <div class="card-body">
-	    <h5 class="card-title">Flight to: <span id="flightId">{{id}}</span></h5>
+	    <h5 class="card-title">Flight to: <span id="flightId">{{flightName}}</span></h5>
 	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 	    <!-- Button trigger modal -->
-		<button type="button" class="btn btn-primary btnGetValue" data-toggle="modal" data-target=".modal" value="{{id}}">
+		<button type="button" class="btn btn-primary btnGetValue" data-toggle="modal" data-target=".modal" value="{{flightName}}">
 		  Generate barcode
 		</button>	
 		</div>
-		
 	</div>
-{{/.}}
+
+
+	<div class="modal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">{{id}}</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+				<svg id="barcode"></svg>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	{{/.}}
 </template>
 
-<div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-			<svg id="barcode"></svg>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="push"></div>
-</div>
 
-<?php include('includes/footer.inc.php'); ?>
+
 
 </body>
 
@@ -80,11 +106,11 @@
 <!-- JsBarcode js -->
 <script src="js/JsBarcode.all.min.js"></script>
 
-<!-- JsBarcode js -->
-<script src="js/plugin.js"></script>
-
 <!-- kaas js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+
+<!-- Barcode Search Plugin -->
+<script src="js/anysearch.js"></script>
 
 <!-- Custom js  -->
 <script src="js/main.js"></script>
