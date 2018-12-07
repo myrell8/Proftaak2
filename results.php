@@ -14,11 +14,6 @@
 <div class="container">
  	<div class="col-xs-12 mx-auto">
 	 <div class="col-sm-12 mx-auto m-5">
-	 <div class="d-flex flex-column justify-content-center mt-5">
-	 <div class="jumbotron jumbotron-fluid" id="scanner">
-		
-	 </div>
-	</div>
     <div class="card-columns container-cards">
       <!-- Template will be displayed in here.. -->
     </div>
