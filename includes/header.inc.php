@@ -15,7 +15,7 @@
 
 			<input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
 			<div class="input-group-prepend">
-				<button class="btn btn-md btn-primary m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon1">Search</button>
+				<button class="btn btn-primary" type="button" id="button-addon1">Search</button>
 			</div>
 		</div>
 <!-- <div class="input-group mb-3">
