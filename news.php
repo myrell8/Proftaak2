@@ -20,7 +20,7 @@
           <h5 class="card-header">{{title}}</h5>
             <img src="{{urlToImage}}" alt="" class="card-img-top" style="height: 18rem; object-fit:cover">
             <div class="card-body">
-           <p class="lead">{{content}} <a href="">lees meer...</a></p>
+           <p class="lead">{{content}} <a href="{{url}}" target="_blank">lees meer...</a></p>
            </div>
            <div class="card-footer text-muted">Door: {{author}}</div>
           </div>
