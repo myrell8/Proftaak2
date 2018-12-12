@@ -4,28 +4,33 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <?php require 'includes/header.inc.php'; ?>
-    <div class="container divHeight">
-      <div class="templateContainer">
-        
-      </div>
-        
+
+  <?php require 'includes/header.inc.php'; ?>
+
+  <div class="container">
+    <div class="wrapper">
+      
+        <div class="templateContainer">
+          
+        </div>
+          
     </div>
   </div>
-  <?php require 'includes/footer.inc.php'; ?>
-  <template id="nieuwsArtikel">
-          {{#.}}
-          <div class="card mt-5 mb-5">
-          <h5 class="card-header">{{title}}</h5>
-            <img src="{{urlToImage}}" alt="" class="card-img-top" style="height: 18rem; object-fit:cover">
-            <div class="card-body">
-           <p class="lead">{{content}} <a href="{{url}}" target="_blank">lees meer...</a></p>
-           </div>
-           <div class="card-footer text-muted">Door: {{author}}</div>
-          </div>
-          {{/.}}
-        </template>
+
+    <?php require 'includes/footer.inc.php'; ?>
+
+    <template id="nieuwsArtikel">
+      {{#.}}
+      <div class="card mt-5 mb-5">
+      <h5 class="card-header">{{title}}</h5>
+      <img src="{{urlToImage}}" alt="" class="card-img-top" style="height: 18rem; object-fit:cover">
+      <div class="card-body">
+       <p class="lead">{{content}} <a href="{{url}}" target="_blank">lees meer...</a></p>
+       </div>
+       <div class="card-footer text-muted">Door: {{author}}</div>
+      </div>
+      {{/.}}
+    </template>
 </body>
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

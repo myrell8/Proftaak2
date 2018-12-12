@@ -4,9 +4,15 @@
 	<?php require 'includes/head.php'; ?>
 </head>
 <body>
+
 <?php require 'includes/header.inc.php'; ?>
-Index
+
+	<div class="container">
+		Home
+	</div>
+
 <?php require 'includes/footer.inc.php'; ?>
+
 </body>
 
 <!-- jQuery -->

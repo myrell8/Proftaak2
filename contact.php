@@ -6,7 +6,11 @@
 <body>
 
 <?php require 'includes/header.inc.php'; ?>
-Contact
+
+	<div class="container">
+		Contact
+	</div>
+
 <?php require 'includes/footer.inc.php'; ?>
 
 

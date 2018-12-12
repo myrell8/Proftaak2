@@ -3,16 +3,20 @@
 <head>
 	<?php require 'includes/head.php'; ?>
 </head>
-<body>
+	<body>
 
-<?php require 'includes/header.inc.php'; ?>
-About
-<?php require 'includes/footer.inc.php'; ?>
+	<?php require 'includes/header.inc.php'; ?>
+
+		<div class="container">
+			About
+		</div>
+
+	<?php require 'includes/footer.inc.php'; ?>
 
 
 
 
-</body>
+	</body>
 
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
