@@ -6,6 +6,10 @@ body{
 	height: 8%;
 }
 
+.navbar-nav{
+	width: 30%;
+}
+
 .navbar-logo{
 	height: inherit;
 }
@@ -27,8 +31,7 @@ body{
 
 .footer{
 	height: 5%;
-	background-color: #132347;
-	color: white;
+	color: rgba(255,255,255,.5);
 }
 
 .container::-webkit-scrollbar-track
@@ -45,5 +48,5 @@ body{
 
 .container::-webkit-scrollbar-thumb
 {
-	background-color: #132347;
+	background-color: #343a40;
 }
