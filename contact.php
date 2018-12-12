@@ -8,7 +8,25 @@
 <?php require 'includes/header.inc.php'; ?>
 
 	<div class="container">
-		Contact
+
+		<p class="h1 mt-4 mb-4 w-100 text-center">Contact</p>
+	
+		<form class="mt-4">
+		  <div class="form-group">
+		    <label for="emailInput">Email address</label>
+		    <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+		  </div>
+		  <div class="form-group">
+		    <label for="subjectInput">Subject</label>
+		    <input type="text" class="form-control" id="subjectInput" placeholder="Subject...">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleFormControlTextarea1">Example textarea</label>
+		    <textarea class="form-control" id="exampleFormControlTextarea1" rows=8></textarea>
+		  </div>
+		  <button type="submit" class="btn btn-secondary w-100">Submit</button>
+		</form>
+
 	</div>
 
 <?php require 'includes/footer.inc.php'; ?>
