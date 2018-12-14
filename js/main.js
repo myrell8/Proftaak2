@@ -13,7 +13,6 @@ $("#btn-search-flight-id").click(function() {
 		type: "GET",
 		contentType: "application/json",
 		success: function(data) {
-			console.log(data);
 			// $.each(data, function (index, value) {
 			//   alert("dikke steen");
 			// });

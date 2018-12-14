@@ -4,21 +4,22 @@
 </head>
 
 <body>
-
+<!-- header required -->
   <?php require 'includes/header.inc.php'; ?>
 
   <div class="container">
     <div class="wrapper">
-      
+
+        <!-- all templates will be outputted in the .templatecontainer class -->
         <div class="templateContainer">
           
         </div>
           
     </div>
   </div>
-
+<!-- footer required -->
     <?php require 'includes/footer.inc.php'; ?>
-
+  <!-- Mustache Template output through javascript -->
     <template id="nieuwsArtikel">
       {{#.}}
       <div class="card mt-5 mb-5">

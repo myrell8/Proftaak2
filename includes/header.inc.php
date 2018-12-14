@@ -1,3 +1,4 @@
+<!-- The default header for all pages that will be included with the require function in php -->
 <nav class="navbar navbar-dark bg-dark navbar-expand">
 	<a href="index.php" class="navbar-brand"><img src="img/LogoWhite.png" height="46px"></a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,11 +11,8 @@
 		<li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
 		<li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
 	</ul>
-<<<<<<< Updated upstream
 	<span class="navbar-text mr-2">
-      Work in progress
     </span>
-=======
 	<div class="pull-right">
 		<div class="input-group mb-3">
 
@@ -35,5 +33,4 @@
 		  </div>
 		</div> -->
 	</div>
->>>>>>> Stashed changes
 </nav>
