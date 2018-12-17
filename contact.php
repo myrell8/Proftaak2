@@ -11,7 +11,7 @@
 
 		<p class="h1 mt-4 mb-4 w-100 text-center">Contact</p>
 	
-		<form class="mt-4">
+		<form class="mt-4" method="POST">
 			<div class="form-group">
 		    <label for="nameInput">Name</label>
 		    <input type="text" class="form-control" id="nameInput" placeholder="Enter name here" name="cf_name">
@@ -47,6 +47,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+<!-- Mustache JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+
+<!-- JsBarcode js -->
+
+<!-- kaas js -->
+
+<!-- Barcode Search Plugin -->
+<!-- <script src="js/anysearch.js"></script> -->
+
+<script src="js/JsBarcode.all.min.js"></script>
 <!-- Custom js  -->
-<script src="js/main.js"></script>
+<!-- <script src="js/main.js"></script> -->
 </html>
