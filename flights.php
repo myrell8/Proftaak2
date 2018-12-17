@@ -21,11 +21,11 @@
 	<div class="card" style="width: 18rem;">
 	  <img class="card-img-top" src="img/flight1.gif" alt="Card image cap">
 	  <div class="card-body">
-	    <h5 class="card-title">Flight to: <span id="flightId">{{flightName}}</span></h5>
+	    <h5 class="card-title">Flight: <span id="flightId">{{flightName}}</span></h5>
 	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 	    <!-- Button trigger modal -->
 		<button type="button" class="btn btn-primary btnGetValue" data-toggle="modal" data-target=".modal" value="{{flightName}}">
-		  Generate barcode
+		  View flight info
 		</button>	
 		</div>
 	</div>
@@ -35,7 +35,7 @@
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title">{{id}}</h5>
+	        <h5 class="modal-title"></h5>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
@@ -44,6 +44,7 @@
 				<svg id="barcode"></svg>
 	      </div>
 	      <div class="modal-footer">
+	      	<button type="button" class="btn btn-primary btn-flight">Go to flight</button>
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 	      </div>
 	    </div>

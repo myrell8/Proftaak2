@@ -12,6 +12,7 @@ function mustache(data, template, outerTemplate) {
 
 flightName = $(".flightName").val();
 
+function retrieveFlight(){
 $.ajax({
 	url: "https://api.schiphol.nl/public-flights/flights?app_id=4a4a192f&app_key=32ec374a8485f67d0a7b8d362bb4228e&flightname="+flightName+"&includedelays=false&page=0&sort=%2Bscheduletime",
 	dataType: "json",
@@ -28,6 +29,26 @@ $.ajax({
 		mustache(data.flights[0], "#generate-flights", ".display-entries");
 }
 })
+}
+
+function getCityImg(){
+
+	$.ajax({
+	url: "https://api.teleport.org/api/urban_areas/slug:san-francisco-bay-area/",
+	dataType: "json",
+	headers: {
+	"Accept": "application/json",
+	},
+		type: "GET",
+		contentType: "application/json",
+		success: function(data) {
+			console.log(data);
+	}
+	})
+};
+
+retrieveFlight();
+getCityImg();
 
 $(document).on("click",".container-flight-left-li",function(){
  	if ($(this).attr("id") == "li-1") {

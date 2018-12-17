@@ -7,7 +7,7 @@
 	<link href="css/anysearch.css" rel="stylesheet">
 </head>
 <body>
-<?php require 'includes/header.inc.php'; ?>
+<?php require 'includes/header.inc.php'; ?> 
 	<?php
 	        $url = $_GET['flight'];
 	        echo "<input class='flightName' type='hidden' value='".$url."'>";
@@ -19,18 +19,17 @@
 		{{#.}}
 		<div class="container-flight">
 			<div class="container-flight-left">
-				<img class="container-flight-left-img" src="img/profilePlaceholder.png">
+				
 				<ul class="list-group container-flight-left-ul">
 					<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li" id="li-1">Flight Information <span class="badge badge-primary badge-pill">14</span></li>
 					<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li" id="li-2">Aircraft Information <span class="badge badge-primary badge-pill">2</span></li>
 					<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li" id="li-3">Flight Status <span class="badge badge-primary badge-pill">1</span></li>
 				</ul>
-				<div class="list-group container-flight-left-ul" style="margin-left: 2em">
-					<a href="http://localhost/FlightCheck/Proftaak2/">
-					<ul>
+				<ul class="list-group container-flight-left-ul">
+					<a href="http://localhost/Proftaak2/">
 						<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li">Go Back</li>
-					</ul></a>
-				</div>
+					</a>
+				</ul>
 			</div>
 			<div class="container-flight-right">
 				<div class="accordion" id="accordionExample">
@@ -90,7 +89,7 @@
 		</div>
 		{{/.}}
 	</template>
-	<?php require 'includes/footer.inc.php'; ?>
+	<?php //require 'includes/footer.inc.php'; ?>
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js">
 </script> <!-- Bootstrap -->

@@ -13,9 +13,6 @@ $("#btn-search-flight-id").click(function() {
 		type: "GET",
 		contentType: "application/json",
 		success: function(data) {
-			// $.each(data, function (index, value) {
-			//   alert("dikke steen");
-			// });
 			var template = $("#generate-flights").html();
 			var renderTemplate = Mustache.render(template, data.flights);
 			mustache(data.flights, "#generate-flights", ".container-cards");
@@ -24,16 +21,6 @@ $("#btn-search-flight-id").click(function() {
 });
 
 dataCounter = 0;
-
-// When the #scannerInput input is equal to 13 it will go to the flight with this specific ID
-// function checkScannedBarcode() {
-// 	$( "#scannerInput" ).change(function() {
-// 		barcodeValue = $("#scannerInput").val();
-
-// 		alert(barcodeValue);
-
-// 	});
-// }
 
 // Function to get all the coins which have been added to the portofolio
 function getFlightInformation() {
@@ -52,13 +39,6 @@ function getFlightInformation() {
 			$('#myModal').on('shown.bs.modal', function() {
 				$('#myInput').trigger('focus')
 			})
-			console.log(data);
-			flightId = data.flights[2].id;
-
-			console.log(flightId);
-			
-			// amountOfFlights = data.flights.length;
-			// console.log("Amount of flights: " + amountOfFlights);
 			var template = $("#generate-flights").html();
 			var renderTemplate = Mustache.render(template, data.flights);
 			mustache(data.flights, "#generate-flights", ".container-cards");
@@ -79,11 +59,6 @@ function mustache(data, template, outerTemplate) {
 }
 
 $(document).ready(function() {
-
-
-
-
-
 	$(document).anysearch({
 		checkIsBarcodeMilliseconds: 250,
 		checkBarcodeMinLength: 18,
@@ -109,28 +84,27 @@ $(document).ready(function() {
 			})
         }
     });
-
-
-
-
-
 	$('#scanner').tooltip("show");
 	$(document).on("click", "#closeModal", function() {
 		$("#myModal").modal("hide");
 	});
 	$(document).on("click", ".btnGetValue", function() {
 		var flightId = $(this).val();
-		console.log(flightId);
 		JsBarcode("#barcode", flightId, {
 			width: 4,
 			height: 40,
 		});
 		$(".modal-title").html(flightId);
+		$(".btn-flight").val(flightId);
 	});
 
-	getFlightInformation();
 
-	//checkScannedBarcode();
+$(document).on("click",".btn-flight",function(){
+	flight = $(this).val();
+	window.location = "http://localhost/Proftaak2/flight.php?flight="+ flight +"";
+});
+
+	getFlightInformation();
 
 	$(document).scannerDetection({
 		//https://github.com/kabachello/jQuery-Scanner-Detection

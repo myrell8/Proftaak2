@@ -47,7 +47,7 @@ a{
 }
 
 .container-flight-left-li{
-  background-color : white; /* Whitesmoke */
+  background-color : white;
   transition: 0.2s;
   border-left: 0px solid black; 
   border-top: none !important;
