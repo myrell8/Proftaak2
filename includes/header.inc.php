@@ -1,6 +1,6 @@
 <!-- The default header for all pages that will be included with the require function in php -->
 <nav class="navbar navbar-dark bg-dark navbar-expand">
-	<a href="index.php" class="navbar-brand"><img src="img/LogoWhite.png" height="46px"></a>
+	<a href="index.php" class="navbar-brand"><img src="img/Logo.png" height="46px"> FlightCheck</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
