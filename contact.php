@@ -12,17 +12,21 @@
 		<p class="h1 mt-4 mb-4 w-100 text-center">Contact</p>
 	
 		<form class="mt-4">
+			<div class="form-group">
+		    <label for="nameInput">Name</label>
+		    <input type="text" class="form-control" id="nameInput" placeholder="Enter name here" name="cf_name">
+		  </div>
 		  <div class="form-group">
 		    <label for="emailInput">Email address</label>
-		    <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+		    <input type="email" class="form-control" id="emailInput" placeholder="Enter email here" name="cf_email">
 		  </div>
 		  <div class="form-group">
 		    <label for="subjectInput">Subject</label>
-		    <input type="text" class="form-control" id="subjectInput" placeholder="Subject...">
+		    <input type="text" class="form-control" id="subjectInput" placeholder="Enter subject here" name="cf_subject">
 		  </div>
 		  <div class="form-group">
-		    <label for="exampleFormControlTextarea1">Example textarea</label>
-		    <textarea class="form-control" id="exampleFormControlTextarea1" rows=8></textarea>
+		    <label for="contactmessage">Example textarea</label>
+		    <textarea class="form-control" id="contactmessage" rows=10 name="cf_message"></textarea>
 		  </div>
 		  <button type="submit" class="btn btn-secondary w-100">Submit</button>
 		</form>

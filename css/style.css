@@ -50,3 +50,7 @@ body{
 {
 	background-color: #343a40;
 }
+
+#contactmessage{
+	resize: none;
+}
