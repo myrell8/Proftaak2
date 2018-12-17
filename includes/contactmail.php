@@ -16,18 +16,10 @@
 
 	$mail_status = mail($mail_to, $subject, $body_message, $headers);
 
-	if ($mail_status) { ?>
-		<script language="javascript" type="text/javascript">
-			alert('Thank you for your ticket. We will contact you shortly.');
-			window.location = '../index.php';
-		</script>
-	<?php
+	if ($mail_status) { 
+		echo "mail has been sent";
 	}
-	else { ?>
-		<script language="javascript" type="text/javascript">
-			alert('Failed to send email. Try mailing myrell-spam@outlook.com for help');
-			window.location = '../index.php';
-		</script>
-	<?php
+	else { 
+		echo "mail has not been sent";
 	}
 ?>
