@@ -101,7 +101,7 @@ $(document).ready(function() {
 
 $(document).on("click",".btn-flight",function(){
 	flight = $(this).val();
-	window.location = "http://localhost/Proftaak2/flight.php?flight="+ flight +"";
+	window.location = "/Proftaak2/flight.php?flight="+ flight +"";
 });
 
 	getFlightInformation();
