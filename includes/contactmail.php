@@ -17,9 +17,9 @@
 	$mail_status = mail($mail_to, $subject, $body_message, $headers);
 
 	if ($mail_status) { 
-		echo "mail has been sent";
+		echo "Mail has been sent";
 	}
 	else { 
-		echo "mail has not been sent";
+		echo "Mail has not been sent";
 	}
 ?>
