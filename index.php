@@ -9,21 +9,23 @@
 
 <?php require 'includes/header.inc.php'; ?>
 
-	<div class="color-divider">
-		<div class="color-screen">		
-<div class="wrap">
-	<div class="textDiv">
-	<h1>Hello!</h1><h2>And Welcome to FlightCheck!	</h2>
+
+<div class="container-fluid p-0 color-divider">
+	<div class="color-screen">		
+		<div class="wrap">
+			<div class="textDiv mb-4">
+				<h1>Hello!</h1><h2>And welcome to FlightCheck!</h2>
+			</div>
+  		 	<div class="search">
+		      	<input type="text" class="searchTerm" placeholder="What are you looking for?">
+		      	<button type="submit" class="searchButton ml-2">
+		        <i class="fa fa-search"></i>
+		     	</button>
+   			</div>
+		</div>
+	</div>
 </div>
-   <div class="search">
-      <input type="text" class="searchTerm" placeholder="What are you looking for?">
-      <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
-     </button>
-   </div>
-</div>
-</div>
-</div>
+
 <?php require 'includes/footer.inc.php'; ?>
 
 </body>

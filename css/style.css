@@ -28,6 +28,10 @@ body{
 	height: 87%;
 	overflow: auto;
 }
+.container-fluid{
+	height: 87%;
+	overflow: auto;
+}
 
 .footer{
 	height: 5%;
