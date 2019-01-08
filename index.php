@@ -2,15 +2,28 @@
 <html>
 <head>
 	<?php require 'includes/head.php'; ?>
+	<link rel="stylesheet" href="css/home-page.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body>
 
 <?php require 'includes/header.inc.php'; ?>
 
-	<div class="container">
-		Home
-	</div>
-
+	<div class="color-divider">
+		<div class="color-screen">		
+<div class="wrap">
+	<div class="textDiv">
+	<h1>Hello!</h1><h2>And Welcome to FlightCheck!	</h2>
+</div>
+   <div class="search">
+      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+</div>
+</div>
+</div>
 <?php require 'includes/footer.inc.php'; ?>
 
 </body>
@@ -26,14 +39,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
 
 <!-- JsBarcode js -->
-<script src="js/JsBarcode.all.min.js"></script>
 
 <!-- kaas js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
 
 <!-- Barcode Search Plugin -->
-<script src="js/anysearch.js"></script>
 
 <!-- Custom js  -->
-<script src="js/main.js"></script>
+<!-- <script src="js/main.js"></script> -->
 </html>
