@@ -21,6 +21,9 @@
 		      	<button type="submit" class="searchButton ml-2">
 		        <i class="fa fa-search"></i>
 		     	</button>
+				 <ul id="myUL">
+				 
+				 </ul>
    			</div>
 		</div>
 	</div>
@@ -49,4 +52,5 @@
 
 <!-- Custom js  -->
 <!-- <script src="js/main.js"></script> -->
+<script src="js/index.js"></script>
 </html>
