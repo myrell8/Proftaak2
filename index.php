@@ -17,12 +17,12 @@
 				<h1>Hello!</h1><h2>And welcome to FlightCheck!</h2>
 			</div>
   		 	<div class="search">
-		      	<input type="text" class="searchTerm" placeholder="What are you looking for?">
+		      	<input type="text" id="myInput" class="searchTerm" placeholder="What are you looking for?" onkeyup="myfunction()">
 		      	<button type="submit" class="searchButton ml-2">
 		        <i class="fa fa-search"></i>
 		     	</button>
 				 <ul id="myUL">
-				 
+
 				 </ul>
    			</div>
 		</div>

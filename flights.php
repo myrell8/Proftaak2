@@ -6,8 +6,12 @@
 <body>
 
 <?php require 'includes/header.inc.php'; ?>
-	
-
+<?php if(isset($_GET['cityName'])){ 
+					$url = $_GET['cityName'];
+					echo "<input class='flightName' type='hidden' value='".$url."'>"; 
+					}else{
+						echo "<input class='flightName' type='hidden' value=''>"; 
+					} ?>
 <div class="container">
  	<div class="col-xs-12 mx-auto">
 	 <div class="col-sm-12 mx-auto m-5">

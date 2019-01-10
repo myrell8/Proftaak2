@@ -76,7 +76,6 @@ body{
   text-align: center;
   list-style: none;
   width: 100%;
-background-color: #00B4CC;
 }
 #myUL::-webkit-scrollbar-track
 {
@@ -92,4 +91,14 @@ background-color: #00B4CC;
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #F5F5F5;
+}
+#myUL li a{
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /*Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
 }
