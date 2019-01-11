@@ -23,10 +23,6 @@ body{
   padding: 5px;
   border-radius: 5px;
   outline: none;
-  color: #9DBFAF;
-}
-
-.searchTerm:focus{
   color: #00B4CC;
 }
 
@@ -92,7 +88,7 @@ body{
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #F5F5F5;
 }
-#myUL li a{
+#myUL li {
   border: 1px solid #ddd; /* Add a border to all links */
   margin-top: -1px; /* Prevent double borders */
   background-color: #f6f6f6; /*Grey background color */
