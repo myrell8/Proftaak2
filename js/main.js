@@ -25,7 +25,7 @@ dataCounter = 0;
 // Function to get all the coins which have been added to the portofolio
 function getFlightInformation() {
 
-	// Ajax function that gets data from get_coins_db.php
+	// ajax call is used to obtain base API
 	$.ajax({
 		url: "https://api.schiphol.nl/public-flights/flights?app_id=4a4a192f&app_key=32ec374a8485f67d0a7b8d362bb4228e&includedelays=false&page=0&sort=%2Bscheduletime",
 		dataType: "json",
@@ -37,28 +37,29 @@ function getFlightInformation() {
 		contentType: "application/json",
 		success: function (data) {
 			flightnew = new Array();
-			var flight = $(".flightName").val();
+			//checks for any search results if not skip the if question
+			var flight = $(".flightName2").val();
 			if (flight != "") {
 				for (i = 0; i < data.flights.length; i++) {
 					var controlling = data.flights[i].route.destinations[0];
-					if (controlling == flight) {
-						console.log("pushed!");
+					if (controlling == flight) {//checks for any flights that use the search term and pushes it into an array
 						flightnew.push(data.flights[i]);
 					}
 				}
-			
-					mustache(flightnew, "#generate-flights", ".container-cards");
-			}else {	
-					mustache(data.flights, "#generate-flights", ".container-cards");
+
+				mustache(flightnew, "#generate-flights", ".container-cards");
+			} else {//converts the array to an usable object that holds information
+
+				mustache(data.flights, "#generate-flights", ".container-cards");
 			}
 		}
+
 	})
 }
 
-// Function that allows mustache to be loaded multiple times.
+
+// Function that allows mustache to be loaded multiple times. from any call
 function mustache(data, template, outerTemplate) {
-	console.log("entered");
-	console.log(data);
 	if ($(outerTemplate).data('template')) {
 		var template = $(outerTemplate).data('template');
 	} else {
@@ -69,14 +70,14 @@ function mustache(data, template, outerTemplate) {
 	$(outerTemplate).html(renderTemplate);
 }
 
-$(document).ready(function () {
+$(document).ready(function () {//everything what needs to be loaded when the document is ready, then it will be executed
 
 
-	$(document).anysearch({
+	$(document).anysearch({//this is for an barcode scanner to check if it could scan a barcode
 		checkIsBarcodeMilliseconds: 250,
 		checkBarcodeMinLength: 18,
 		searchFunc: function (search) {
-			$.ajax({
+			$.ajax({//if it found an barcode it can read the information and is used for an ajax call
 				url: "https://api.schiphol.nl/public-flights/flights?app_id=4a4a192f&app_key=32ec374a8485f67d0a7b8d362bb4228e&flightname=" + search + "&includedelays=false&page=0&sort=%2Bscheduletime",
 				dataType: "json",
 				headers: {
@@ -86,18 +87,13 @@ $(document).ready(function () {
 				type: "GET",
 				contentType: "application/json",
 				success: function (data) {
-					var flight = $(".flightName").val();
-					if (flight != "") {
-						$.each(data.flights.route.destinations, function (index, value) {
-							console.log(value);
-						});
-					} else {
-						var template = $("#generate-flights").html();
-						var renderTemplate = Mustache.render(template, data);
-						mustache(data, "#generate-flights", ".container-cards");
-						url = "http://localhost/FlightCheck/Proftaak2/flight.php?flight=" + search;
-						window.location.replace(url);
-					}
+					//switch to another page using window.location
+					var template = $("#generate-flights").html();
+					var renderTemplate = Mustache.render(template, data);
+					mustache(data, "#generate-flights", ".container-cards");
+					url = "http://localhost/Proftaak2/flight.php?flight=" + search;
+					window.location.replace(url);
+
 				}
 			})
 		}
@@ -123,20 +119,19 @@ $(document).ready(function () {
 	});
 	getFlightInformation();
 
-
-	$(document).scannerDetection({
-		//https://github.com/kabachello/jQuery-Scanner-Detection
-		timeBeforeScanTest: 200, // wait for the next character for upto 200ms
-		avgTimeByChar: 40, // it's not a barcode if a character takes longer than 100ms
-		preventDefault: true,
-		endChar: [13],
-		onComplete: function (barcode, qty) {
-			validScan = true;
-			$('#scannerInput').val(barcode);
-		} // main callback function ,
-		,
-		onError: function (string, qty) {
-			$('#userInput').val($('#userInput').val() + string);
-		}
-	});
 });
+	// $(document).scannerDetection({
+	// 	//https://github.com/kabachello/jQuery-Scanner-Detection
+	// 	timeBeforeScanTest: 200, // wait for the next character for upto 200ms
+	// 	avgTimeByChar: 40, // it's not a barcode if a character takes longer than 100ms
+	// 	preventDefault: true,
+	// 	endChar: [13],
+	// 	onComplete: function (barcode, qty) {
+	// 		validScan = true;
+	// 		$('#scannerInput').val(barcode);
+	// 	} // main callback function ,
+	// 	,
+	// 	onError: function (string, qty) {
+	// 		$('#userInput').val($('#userInput').val() + string);
+	// 	}
+	// });

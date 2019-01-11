@@ -10,7 +10,6 @@ function obtainItems(){
         method: "GET",
         dataType: "json",
         success: function(data){
-            console.log(data.articles);
         var articles = data.articles;
         //template will be used to create news articles
         var template = $("#nieuwsArtikel").html();

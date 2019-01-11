@@ -1,3 +1,4 @@
+<?php header('Access-Control-Allow-Origin: *'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,11 +20,9 @@
 		{{#.}}
 		<div class="container-flight">
 			<div class="container-flight-left">
-				
+					<div><img class="city-img"></div>
 				<ul class="list-group container-flight-left-ul">
-					<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li" id="li-1">Flight Information <span class="badge badge-primary badge-pill">14</span></li>
-					<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li" id="li-2">Aircraft Information <span class="badge badge-primary badge-pill">2</span></li>
-					<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li" id="li-3">Flight Status <span class="badge badge-primary badge-pill">1</span></li>
+					<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li flight-active" id="li-1">Flight Information <span class="badge badge-primary badge-pill">9</span></li>
 				</ul>
 				<ul class="list-group container-flight-left-ul">
 					<a href="http://localhost/Proftaak2/">
