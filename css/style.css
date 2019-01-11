@@ -16,7 +16,7 @@ body{
 
 .modal-body{
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	align-items: center;
 }
 
@@ -57,4 +57,9 @@ body{
 
 #contactmessage{
 	resize: none;
+}
+
+.card-img-top{
+	height: 18rem; 
+	object-fit:cover;
 }

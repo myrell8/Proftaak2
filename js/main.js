@@ -39,11 +39,56 @@ function getFlightInformation() {
 			$('#myModal').on('shown.bs.modal', function() {
 				$('#myInput').trigger('focus')
 			})
+
+			console.log(data.flights);
+
+			for (i = 0; i < data.flights.length - 1; i++){
+			flightDestination = data.flights[i].route.destinations[0];
+
+			$.ajax({
+				url: "https://api.schiphol.nl/public-flights/destinations/"+ flightDestination +"?app_id=4a4a192f&app_key=32ec374a8485f67d0a7b8d362bb4228e",
+				dataType: "json",
+				headers: {
+					"Accept": "application/json",
+					"ResourceVersion": "v1"
+				},
+				type: "GET",
+				contentType: "application/json",
+				success: function(data) {
+					city = data.city.toLowerCase();
+					console.log(city);
+
+				$.ajax({
+					url: "https://api.teleport.org/api/urban_areas/slug:"+ city +"/images",
+					dataType: "json",
+					type: "GET",
+					contentType: "application/json",
+					success: function(data) {
+
+						imgSrc = data.photos[0].image.web;
+
+						// for(i = 0; i < data.photos - 1; i++){
+							$(".card-img-top").attr('src', imgSrc);
+						// }
+						
+						
+						
+					}
+				})
+				}
+			})
+			}
+
+
+
 			var template = $("#generate-flights").html();
 			var renderTemplate = Mustache.render(template, data.flights);
 			mustache(data.flights, "#generate-flights", ".container-cards");
 		}
 	})
+}
+
+function getCityImg(){
 }
 
 // Function that allows mustache to be loaded multiple times.
@@ -78,7 +123,7 @@ $(document).ready(function() {
 				var template = $("#generate-flights").html();
 				var renderTemplate = Mustache.render(template, data);
 				mustache(data, "#generate-flights", ".container-cards");
-				url = "http://localhost/FlightCheck/Proftaak2/flight.php?flight=" + search;
+				url = "http://localhost/Proftaak2/flight.php?flight=" + search;
 				window.location.replace(url);
 				}
 			})
@@ -106,19 +151,19 @@ $(document).on("click",".btn-flight",function(){
 
 	getFlightInformation();
 
-	$(document).scannerDetection({
-		//https://github.com/kabachello/jQuery-Scanner-Detection
-		timeBeforeScanTest: 200, // wait for the next character for upto 200ms
-		avgTimeByChar: 40, // it's not a barcode if a character takes longer than 100ms
-		preventDefault: true,
-		endChar: [13],
-		onComplete: function(barcode, qty) {
-				validScan = true;
-				$('#scannerInput').val(barcode);
-			} // main callback function ,
-			,
-		onError: function(string, qty) {
-			$('#userInput').val($('#userInput').val() + string);
-		}
-	});
+// $(document).scannerDetection({
+// 	//https://github.com/kabachello/jQuery-Scanner-Detection
+// 	timeBeforeScanTest: 200, // wait for the next character for upto 200ms
+// 	avgTimeByChar: 40, // it's not a barcode if a character takes longer than 100ms
+// 	preventDefault: true,
+// 	endChar: [13],
+// 	onComplete: function(barcode, qty) {
+// 			validScan = true;
+// 			$('#scannerInput').val(barcode);
+// 		} // main callback function ,
+// 		,
+// 	onError: function(string, qty) {
+// 		$('#userInput').val($('#userInput').val() + string);
+// 	}
+// });
 });

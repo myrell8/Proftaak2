@@ -21,12 +21,13 @@
 			<div class="container-flight-left">
 				
 				<ul class="list-group container-flight-left-ul">
-					<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li" id="li-1">Flight Information <span class="badge badge-primary badge-pill">14</span></li>
-					<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li" id="li-2">Aircraft Information <span class="badge badge-primary badge-pill">2</span></li>
+					<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li flight-active" id="li-1">Flight Information <span class="badge badge-primary badge-pill">9</span></li>
+					<!-- <li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li" id="li-2">Aircraft Information <span class="badge badge-primary badge-pill">2</span></li>
 					<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li" id="li-3">Flight Status <span class="badge badge-primary badge-pill">1</span></li>
+					<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li" id="li-4">Destination <span class="badge badge-primary badge-pill">11</span></li> -->
 				</ul>
 				<ul class="list-group container-flight-left-ul">
-					<a href="http://localhost/Proftaak2/">
+					<a href="/Proftaak2/flights.php">
 						<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li">Go Back</li>
 					</a>
 				</ul>
@@ -71,7 +72,7 @@
 									</li>
 									<li class="list-group-item">Flight Name: {{flightName}}</li>
 									<li class="list-group-item">Flight Number: {{flightNumber}}</li>
-									<li class="list-group-item">IATA Code: {{prefixIATA}}</li>
+									<li class="list-group-item">IATA Code: {{route.destinations}}</li>
 									<li class="list-group-item">Flight ID: {{id}}</li>
 									<li class="list-group-item">
 										<div class="h1">

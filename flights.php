@@ -10,26 +10,12 @@
 
 <div class="container">
  	<div class="col-xs-12 mx-auto">
-	 <div class="col-sm-12 mx-auto m-5">
-    <div class="card-columns container-cards">
-      <!-- Template will be displayed in here.. -->
-    </div>
-	</div>
-</div>
-    <template id="generate-flights">
-    {{#.}}
-	<div class="card" style="width: 18rem;">
-	  <img class="card-img-top" src="img/flight1.gif" alt="Card image cap">
-	  <div class="card-body">
-	    <h5 class="card-title">Flight: <span id="flightId">{{flightName}}</span></h5>
-	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	    <!-- Button trigger modal -->
-		<button type="button" class="btn btn-primary btnGetValue" data-toggle="modal" data-target=".modal" value="{{flightName}}">
-		  View flight info
-		</button>	
+	 	<div class="col-sm-12 mx-auto m-5">
+	    	<div class="card-columns container-cards">
+	      		<!-- Template will be displayed in here.. -->
+	    	</div>
 		</div>
 	</div>
-
 
 	<div class="modal" tabindex="-1" role="dialog">
 	  <div class="modal-dialog" role="document">
@@ -41,7 +27,13 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-				<svg id="barcode"></svg>
+	      	<div class="table">
+    			<div class="table-header">
+	    			scheduleDate
+	    		</div>
+	    	</div>
+	    
+	  	<svg id="barcode"></svg>
 	      </div>
 	      <div class="modal-footer">
 	      	<button type="button" class="btn btn-primary btn-flight">Go to flight</button>
@@ -49,6 +41,21 @@
 	      </div>
 	    </div>
 	  </div>
+	</div>
+
+	
+    <template id="generate-flights">
+    {{#.}}
+	<div class="card" style="width: 18rem;">
+	  <img class="card-img-top" src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/amsterdam_web-1cd4b2bf75.jpg" alt="Card image cap">
+	  <div class="card-body">
+	    <h5 class="card-title">Flight name: <span id="flightId">{{flightName}}</span></h5>
+	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+	    <!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary btnGetValue" data-toggle="modal" data-target=".modal" value="{{flightName}}">
+		  View flight info
+		</button>	
+		</div>
 	</div>
 	{{/.}}
 </template>
