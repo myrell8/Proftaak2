@@ -35,7 +35,7 @@ if(isset($_GET['cityName'])){
 	      <div class="modal-body">
 	      	<div class="table">
     			<div class="table-header">
-	    			scheduleDate
+	    	
 	    		</div>
 	    	</div>
 	    
