@@ -42,7 +42,6 @@ $.ajax({
 				contentType: "application/json",
 				success: function(data) {
 					city = data.city.toLowerCase();
-					console.log(city);
 
 					// Ajax call to the Teleport API to retrieve a img based on the city the flight is going too/ coming from
 					$.ajax({
