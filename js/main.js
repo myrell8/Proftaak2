@@ -47,7 +47,14 @@ function getFlightInformation() {
 						flightnew.push(data.flights[i]);
 					}
 				}
+				if(flightnew.length == 0){
+					$(".container").append(`
+						<div class="noResultDiv"><h2>No flights were found... </h2><div><a href="index.php">< go back</a><a href="flights.php">show all flights ></a></div></div>
+					`);
+
+				}else{
 				mustache(flightnew, "#generate-flights", ".container-cards");
+				}
 			} else {//converts the array to an usable object that holds information
 				mustache(data.flights, "#generate-flights", ".container-cards");
 			}

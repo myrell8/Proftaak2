@@ -6,3 +6,15 @@ body{
 .container{
     background-color: rgba(52, 58, 64, 0.85 );
 }
+.noResultDiv{
+	color: white;
+	position: absolute;
+	bottom: 50%;
+	left: 40%;
+}
+.noResultDiv div{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
