@@ -6,36 +6,44 @@
 </head>
 	<body>
 	<?php require 'includes/header.inc.php'; ?>
-   <div class="container">
-      <div class="row">
-         <div class="col-xs-12">
-			<h1>Who are we?</h1>
-			<p>We are three students from Roc ter aa, in Helmond. This is our exam group project, 
-				this means we have to work together as students to create a working product(without the help of any teachers). 
-				The idea was <q>to help the tourists with planning their trip by plane</q>. 
-				To achieve this we had multiple ideas we wanted to produce: by scanning their tickets(imagine it like a terminal on the airport), 
-				it would link the city of the airport will also find some news articles intersting to your destination and also showing news articles about tourismand such.	
-		</p>
+   <div class="container text-white">
+      <div class="w-100 d-flex flex-column align-items-center pt-4">
+      	<img id="aboutLogo" src="img/Logo.png">
+         <div class="w-75">  	
+			<h1 class="w-100 text-center mt-4">About</h1>
+			<p>
+				FlightCheck is a webapplication that helps passengers find all the info they need about their flights. It uses Schiphol's Flight API to
+				gather and distribute data.<br>
+				FlightCheck is created and maintained by three students from ROC Ter AA in Helmond, The Netherlands for a group project.
+			</p>
+		</div>
+
+		<h1 class="w-100 text-center mt-4">Our Team</h1>
+		<div class="w-100 d-flex justify-content-around text-dark">
+			<div class="card" style="width: 18rem;">
+			  <img class="dev-img w-50 m-auto p-2" src="img/user.png">
+			  <div class="card-body">
+			    <p class="card-text text-center">Myrell Richardson</p>
+			  </div>
+			</div>
+
+			<div class="card" style="width: 18rem;">
+			  <img class="dev-img w-50 m-auto p-2" src="img/user.png">
+			  <div class="card-body">
+			    <p class="card-text text-center">Joey vd Looverbosch</p>
+			  </div>
+			</div>
+
+			<div class="card" style="width: 18rem;">
+			  <img class="dev-img w-50 m-auto p-2" src="img/user.png">
+			  <div class="card-body">
+			    <p class="card-text text-center">Remco vd Linden</p>
+			  </div>
+			</div>
 		</div>
 	  </div>
-
-	  <div class="row">
-		  <div class="col-xs-12">
-				<h1>Current Situation</h1>
-				<p>Our situation we are dealing with, is that we sadly cannot make all our ideas possible due to time limitations but we would've been happy to make the other things</p>
-			</div>
-	  </div>
-	   <div class="row">
-		   <div class="col-xs-12">
-			   <h1>Our Goal</h1>
-			</div>
-	   </div>
    </div>
 	<?php require 'includes/footer.inc.php'; ?>
-
-
-
-
 	</body>
 
 <!-- jQuery -->

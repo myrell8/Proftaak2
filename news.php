@@ -1,6 +1,7 @@
 <html>  
 <head>
   <?php require 'includes/head.php'; ?>
+  <link rel="stylesheet" href="css/news.css">
 </head>
 
 <body>
@@ -22,13 +23,15 @@
   <!-- Mustache Template output through javascript -->
     <template id="nieuwsArtikel">
       {{#.}}
-      <div class="card mt-5 mb-5">
-      <h5 class="card-header">{{title}}</h5>
-      <img src="{{urlToImage}}" alt="" class="card-img-top" style="height: 18rem; object-fit:cover">
-      <div class="card-body">
-       <p class="lead">{{content}} <a href="{{url}}" target="_blank">lees meer...</a></p>
-       </div>
-       <div class="card-footer text-muted">Door: {{author}}</div>
+      <div class="article w-100  mt-4 mb-4">
+        <div class="card articleText w-100">
+          <h5 class="card-header">{{title}}</h5>
+          <div class="card-body d-flex justify-content-center align-items-center">
+            <img src="{{urlToImage}}" alt="" class="img-thumbnail articleImg mr-4">
+            <p class="lead">{{content}}<br><br><a href="{{url}}" target="_blank" class="btn btn-secondary">Lees meer...</a></p>
+          </div>
+          <div class="card-footer text-muted">Door: {{author}}</div>
+        </div>
       </div>
       {{/.}}
     </template>

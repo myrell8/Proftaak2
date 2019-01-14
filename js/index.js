@@ -18,11 +18,13 @@ $(document).ready(() => {
         }
     });
 });
-    function myRead(data){
-        var xd = $(data).text();
-        $("#myInput").val(xd);
-        return false;
-    }
+
+function myRead(data){
+    var cityToken = $(data).text();
+    $("#myInput").val(cityToken);
+    return false;
+}
+
 function myfunction() {
     var input, filter, ul, li, i, txtValue;
     input = document.getElementById('myInput');

@@ -2,33 +2,34 @@
 <html>
 <head>
 	<?php require 'includes/head.php'; ?>
+	<link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
 
 <?php require 'includes/header.inc.php'; ?>
 
-	<div class="container">
+	<div class="container text-white">
 
-		<p class="h1 mt-4 mb-4 w-100 text-center">Contact</p>
+		<p class="h1 mt-4 mb-4 w-100 text-center text">Contact</p>
 	
-		<form class="mt-4" class="form">
-			<div class="form-group">
+		<form class="form d-flex flex-column align-items-center mt-4">
+			<div class="form-group w-75">
 		    <label for="nameInput">Name</label>
 		    <input type="text" class="form-control" id="nameInput" placeholder="Enter name here" name="cf_name">
 		  </div>
-		  <div class="form-group">
+		  <div class="form-group w-75">
 		    <label for="emailInput">Email address</label>
 		    <input type="email" class="form-control" id="emailInput" placeholder="Enter email here" name="cf_email">
 		  </div>
-		  <div class="form-group">
+		  <div class="form-group w-75">
 		    <label for="subjectInput">Subject</label>
 		    <input type="text" class="form-control" id="subjectInput" placeholder="Enter subject here" name="cf_subject">
 		  </div>
-		  <div class="form-group">
-		    <label for="contactmessage">Example textarea</label>
+		  <div class="form-group w-75">
+		    <label for="contactmessage">Message</label>
 		    <textarea class="form-control" id="contactmessage" rows=10 name="cf_message"></textarea>
 		  </div>
-		  <button type="submit" class="btn btn-secondary w-100" id="submitFormBtn">Submit</button>
+		  <button type="submit" class="btn btn-secondary w-75" id="submitFormBtn">Submit</button>
 		</form>
 
 	</div>
@@ -49,13 +50,6 @@
 
 <!-- Mustache JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
-
-<!-- JsBarcode js -->
-
-<!-- kaas js -->
-
-<!-- Barcode Search Plugin -->
-<!-- <script src="js/anysearch.js"></script> -->
 
 <script src="js/JsBarcode.all.min.js"></script>
 <!-- Custom js  -->

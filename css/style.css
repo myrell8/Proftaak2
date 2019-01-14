@@ -63,3 +63,15 @@ body{
 	height: 18rem; 
 	object-fit:cover;
 }
+
+.article{
+	height: 21rem;
+}
+
+.articleImg{
+	height: 12rem;
+
+}
+.articleText{
+	height: 20rem;
+}
