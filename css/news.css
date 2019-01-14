@@ -1,0 +1,12 @@
+body{
+	background-image: url(../img/news.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+
+}
+.container{
+    background-color: rgba(52, 58, 64, 0.85 );
+}
+.lead{
+	min-width: 65%;
+}

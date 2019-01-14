@@ -2,17 +2,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Barcode Scanner</title>
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+	<?php require 'includes/head.php'; ?>
 	<link href="css/flight.css" rel="stylesheet" type="text/css">
-	<link href="css/anysearch.css" rel="stylesheet">
 </head>
 <body>
 <?php require 'includes/header.inc.php'; ?> 
+	<div class="container d-flex flex-column justify-content-around align-items-center">
+
 	<?php
-	        $url = $_GET['flight'];
-	        echo "<input class='flightName' type='hidden' value='".$url."'>";
-	    ?>
+        $url = $_GET['flight'];
+        echo "<input class='flightName' type='hidden' value='".$url."'>";
+    ?>
+
+    <h1 class="text-white">Flight: <?php echo $url ?></h1>
+
 	<div class="display-entries">
 		<!-- Template will be displayed in here.. -->
 	</div>
@@ -20,21 +23,18 @@
 		{{#.}}
 		<div class="container-flight">
 			<div class="container-flight-left">
-					<div><img class="city-img"></div>
+				<div><img class="city-img" src="img/background.jpg"></div>
 				<ul class="list-group container-flight-left-ul">
-					<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li flight-active" id="li-1">Flight Information <span class="badge badge-primary badge-pill">9</span></li>
-				</ul>
-				<ul class="list-group container-flight-left-ul">
-					<a href="http://localhost/Proftaak2/">
+					<a href="flights.php">
 						<li class="list-group-item d-flex justify-content-between align-items-center container-flight-left-li">Go Back</li>
 					</a>
 				</ul>
 			</div>
 			<div class="container-flight-right">
-				<div class="accordion" id="accordionExample">
+				<div class="accordion h-100" id="accordionExample">
 					<div class="card">
 						<div class="card-header" id="headingOne">
-							<h5 class="mb-0"><button aria-controls="collapseOne" aria-expanded="true" class="btn btn-link" data-target="#collapseOne" data-toggle="collapse" type="button">Times, Dates</button></h5>
+							<h5 class="mb-0 bg"><button aria-controls="collapseOne" aria-expanded="true" class="btn btn-link" data-target="#collapseOne" data-toggle="collapse" type="button">Times, Dates</button></h5>
 						</div>
 						<div aria-labelledby="headingOne" class="collapse show" data-parent="#accordionExample" id="collapseOne">
 							<div class="card-body">
@@ -106,5 +106,7 @@
 </script> <!-- Custom js  -->
 <script src="js/flight.js">
 </script>
+</div>
+<?php require 'includes/footer.inc.php'; ?>
 </body>
 </html>

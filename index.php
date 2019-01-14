@@ -10,25 +10,23 @@
 <?php require 'includes/header.inc.php'; ?>
 
 
-<div class="container-fluid p-0 color-divider">
-	<div class="color-screen">		
-		<div class="wrap">
-			<div class="textDiv mb-4">
-				<h1>Hello!</h1><h2>And welcome to FlightCheck!</h2>
+<div class="container-fluid d-flex justify-content-center align-items-center">	
+		<div class="wrap w-50">
+			<div class="text-center text-white mb-4">
+				<h1>Welcome to FlightCheck!</h1><h3 class="mt-4">Enter the destination city code to find your flight!</h3>
 			</div>
-  		 	<div class="search">
-			   <form action="flights.php" method="GET">
-		      	<input name="cityName" type="text" id="myInput" class="searchTerm" placeholder="What are you looking for?" onkeyup="myfunction()">
-		      	<button type="submit" class="searchButton ml-2">
-				  </form>
-		        <i class="fa fa-search"></i>
-		     	</button>
-				 <ul id="myUL">
+  		 	<div class="search w-75 m-auto">
+			   <form action="flights.php" method="GET" class="mb-4">
+		      		<input name="cityName" type="text" id="myInput" class="searchTerm" placeholder="What are you looking for?" onkeyup="myfunction()">
+		      		<button type="submit" class="searchButton ml-2">
+		      			<i class="fa fa-search"></i>
+		     		</button>
+		     	</form>
+		     	<ul id="myUL" class="w-100 p-0">
 
-				 </ul>
+				</ul>
    			</div>
 		</div>
-	</div>
 </div>
 
 <?php require 'includes/footer.inc.php'; ?>
@@ -45,12 +43,8 @@
 <!-- Mustache JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
 
-<!-- JsBarcode js -->
-
 <!-- kaas js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
-
-<!-- Barcode Search Plugin -->
 
 <!-- Custom js  -->
 <!-- <script src="js/main.js"></script> -->

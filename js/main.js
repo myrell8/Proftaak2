@@ -36,6 +36,7 @@ function getFlightInformation() {
 		type: "GET",
 		contentType: "application/json",
 		success: function (data) {
+			console.log(data);
 			flightnew = new Array();
 			//checks for any search results if not skip the if question
 			var flight = $(".flightName2").val();
@@ -46,10 +47,8 @@ function getFlightInformation() {
 						flightnew.push(data.flights[i]);
 					}
 				}
-
 				mustache(flightnew, "#generate-flights", ".container-cards");
 			} else {//converts the array to an usable object that holds information
-
 				mustache(data.flights, "#generate-flights", ".container-cards");
 			}
 		}
