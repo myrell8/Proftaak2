@@ -49,7 +49,7 @@ function getFlightInformation() {
 				}
 				if(flightnew.length == 0){
 					$(".container").append(`
-						<div class="noResultDiv"><h2>No flights were found... </h2><div><a href="index.php">< go back</a><a href="flights.php">show all flights ></a></div></div>
+						<div class='w-100 h-100 d-flex flex-column align-items-center justify-content-center'><h2 class='mb-4 text-white'>No flights found... </h2><div class='w-50 d-flex justify-content-between'><a href='index.php' class="btn btn-secondary float-left">Back to home</a><a href='flights.php' class='btn btn-secondary float-right'>Show all flights</a></div></div>
 					`);
 
 				}else{

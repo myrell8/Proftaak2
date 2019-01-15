@@ -18,8 +18,8 @@ $(document).ready(() => {
         }
     });
     $("form").on("submit", (e) => {
-        if($("input[name=cityName").val().length > 3) {e.preventDefault(); alert("Only search by city codes (Example: AMS = Amsterdam)");}
-        else if($("input[name=cityName").val().length == 0){ e.preventDefault(); alert("The item you tried to search is too short for a city code(it should've been 3 letters long)");}
+        if($("input[name=cityName").val().length > 3) {e.preventDefault(); alert("Please search by city codes (Example: AMS = Amsterdam)");}
+        else if($("input[name=cityName").val().length == 0){ e.preventDefault(); alert("The city code you entered is too short (Example: AMS = Amsterdam)");}
     });
 });
 
