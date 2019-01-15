@@ -43,7 +43,7 @@ function getFlightInformation() {
 			if (flight != "") {
 				for (i = 0; i < data.flights.length; i++) {
 					var controlling = data.flights[i].route.destinations[0];
-					if (controlling == flight) {//checks for any flights that use the search term and pushes it into an array
+					if (controlling.includes(flight)) {//checks for any flights that use the search term and pushes it into an array
 						flightnew.push(data.flights[i]);
 					}
 				}
