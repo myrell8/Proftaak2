@@ -2,7 +2,7 @@ $('#myModal').on('shown.bs.modal', function () {
 	$('#myInput').trigger('focus')
 })
 $("#btn-search-flight-id").click(function () {
-	FlightSearch = $("#input-search-flight-id").val();
+	FlightSearch = $("#input-search-flight-id").val().toUpperCase();
 	$.ajax({
 		url: "https://api.schiphol.nl/public-flights/destinations/" + FlightSearch + "?app_id=4a4a192f&app_key=32ec374a8485f67d0a7b8d362bb4228e",
 		dataType: "json",
@@ -39,7 +39,7 @@ function getFlightInformation() {
 			console.log(data);
 			flightnew = new Array();
 			//checks for any search results if not skip the if question
-			var flight = $(".flightName2").val();
+			var flight = $(".flightName2").val().toUpperCase();
 			if (flight != "") {
 				for (i = 0; i < data.flights.length; i++) {
 					var controlling = data.flights[i].route.destinations[0];
