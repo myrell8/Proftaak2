@@ -23,21 +23,21 @@
 		<h1 class="w-100 text-center mt-4">Our Team</h1>
 		<div class="w-100 d-flex justify-content-around text-dark">
 			<div class="card" style="width: 18rem;">
-			  <img class="dev-img w-50 m-auto p-2" src="img/user.png">
+			  <img class="dev-img rounded-circle m-auto p-2" src="img/myrell.jpg">
 			  <div class="card-body">
 			    <p class="card-text text-center">Myrell Richardson</p>
 			  </div>
 			</div>
 
 			<div class="card" style="width: 18rem;">
-			  <img class="dev-img w-50 m-auto p-2" src="img/user.png">
+			  <img class="dev-img rounded-circle m-auto p-2" src="img/joey.jpg">
 			  <div class="card-body">
 			    <p class="card-text text-center">Joey vd Looverbosch</p>
 			  </div>
 			</div>
 
 			<div class="card" style="width: 18rem;">
-			  <img class="dev-img w-50 m-auto p-2" src="img/user.png">
+			  <img class="dev-img rounded-circle m-auto p-2" src="img/remco.jpg">
 			  <div class="card-body">
 			    <p class="card-text text-center">Remco vd Linden</p>
 			  </div>
