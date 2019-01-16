@@ -13,8 +13,10 @@
 			<h1 class="w-100 text-center mt-4">About</h1>
 			<p>
 				FlightCheck is a webapplication that helps passengers find all the info they need about their flights. It uses Schiphol's Flight API to
-				gather and distribute data.<br>
-				FlightCheck is created and maintained by three students from ROC Ter AA in Helmond, The Netherlands for a group project.
+				gather and distribute data. Users can also use a barcode scanner to scan their printed tickets and find their flight that way.<br>
+				FlightCheck is created and maintained by three students from ROC Ter AA in Helmond, The Netherlands for a group project. We had alot
+				of fun creating this website and also learned alot in the process. We'd like to thank our teachers from ROC Ter AA for guiding and helping
+				us with this project.
 			</p>
 		</div>
 
@@ -64,7 +66,4 @@
 
 <!-- Barcode Search Plugin -->
 <script src="js/anysearch.js"></script>
-
-<!-- Custom js  -->
-<script src="js/main.js"></script>
 </html>

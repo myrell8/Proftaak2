@@ -18,14 +18,15 @@ function retrieveFlight(){
 
 // Ajax call to the Schiphol api that retrieves data of one flight
 $.ajax({
-	url: "https://api.schiphol.nl/public-flights/flights?app_id=4a4a192f&app_key=32ec374a8485f67d0a7b8d362bb4228e&flightname="+flightName+"&includedelays=false&page=0&sort=%2Bscheduletime",
+	url: "getFlightInfo.php",
 	dataType: "json",
-	headers: {
-	"Accept": "application/json",
-	"ResourceVersion": "v3"},
 	type: "GET",
+	data: {flight: flightName},
 	contentType: "application/json",
 	success: function(data) {
+
+		// Create an actual JSON array from a normal array using JSON.parse
+		data = JSON.parse(data);
 
 		// Put the destination where the flight is coming from/ going too in a variable for easy use
 		flightDestination = data.flights[0].route.destinations[0];
